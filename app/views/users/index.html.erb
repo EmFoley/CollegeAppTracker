@@ -1,0 +1,7 @@
+<div id="users"></div>
+<script type="text/javascript">
+  $(function(){
+    window.router = new CollegeAppTracker.Routers.UsersRouter({users:<%= @users.to_json.html_safe -%>});
+    Backbone.history.start();
+  });
+</script>
