@@ -1,7 +1,7 @@
-<div id="users"></div>
-<script type="text/javascript">
-  $(function(){
-    window.router = new CollegeAppTracker.Routers.UsersRouter({users:<%= @users.to_json.html_safe -%>});
-    Backbone.history.start();
-  });
-</script>
+<div class="welcome">
+  <p>Track Your College Applications Easily!</p>
+  <%= link_to "Register Here", new_user_registration_path %>
+  <%= link_to "Login", new_user_session_path %>
+
+</div>
+
