@@ -1,6 +1,11 @@
 @import "bootstrap-sprockets";
 @import "bootstrap";
 
+.top-notice {
+  position: relative;
+  left: 38%;
+}
+
 .form {
   width: 30%;
   position: relative;
