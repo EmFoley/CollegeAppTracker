@@ -1,5 +1,4 @@
 class ApplicationsController < ApplicationController
-  before_action :set_application, only: [:show, :edit, :update, :destroy]
 
   def index
     @applications = Application.all
@@ -50,9 +49,6 @@ class ApplicationsController < ApplicationController
   end
 
   private
-    def set_application
-      @application = Application.find(params[:id])
-    end
 
     def application_params
       params.fetch(:application, {})

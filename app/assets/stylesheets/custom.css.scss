@@ -1,6 +1,11 @@
 @import "bootstrap-sprockets";
 @import "bootstrap";
 
+html, body {
+  width: auto !important;
+  overflow-x: hidden !important;
+}
+
 .top-notice {
   position: relative;
   left: 38%;
@@ -16,6 +21,11 @@
   position: relative;
   left: 48%;
   bottom: 4%;
+}
+
+.management-links {
+  position: relative;
+  left: 30%;
 }
 
 .devise-links {

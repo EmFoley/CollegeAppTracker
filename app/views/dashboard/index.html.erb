@@ -1,3 +1,13 @@
-<div class="welcome header">
-  <p>Track Your College Applications Easily!</p>
+<div class="jumbotron jumbotron-fluid">
+  <div class="container">
+    <h1 class="display-3">Welcome to Your College Applications Dashboard!</h1>
+    <p class="lead">Easily track and manage your college applications, all in one place.</p>
+  </div>
+</div>
+
+<div class="management-links">
+  <%= link_to "Manage Account Settings", edit_user_registration_path, class: "btn btn-primary"%>
+  <%= link_to "Manage My Applications", applications_path, class: "btn btn-primary js-open-apps-manager" %>
+</div>
+<div class="manage-applications">
 </div>
