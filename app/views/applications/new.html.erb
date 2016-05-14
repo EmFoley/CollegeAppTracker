@@ -1,0 +1,12 @@
+<%= form_for@application, html: { class: 'form'} do |f| %>
+
+  <div class="field form-group">
+    <%= f.label :college %><br />
+    <%= f.text_field :name, class: 'form-control' %>
+  </div>
+
+
+  <div class="actions btn btn-default">
+    <%= f.submit "Add to Application List", class: 'form-control' %>
+  </div>
+<% end %>
