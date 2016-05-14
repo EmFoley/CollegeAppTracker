@@ -1,7 +1,12 @@
-# This file should contain all the record creation needed to seed the database with its default values.
-# The data can then be loaded with the rake db:seed (or created alongside the db with db:setup).
-#
-# Examples:
-#
-#   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
-#   Mayor.create(name: 'Emanuel', city: cities.first)
+require 'csv'
+
+csv_text = File.read(Rails.root.join('lib', 'seeds', 'accreditedcolleges2016.csv'))
+csv = CSV.parse(csv_text, :headers => true)
+csv.each do |row|
+  c = College.new
+  c.name = row[0]
+  c.save
+  puts "#{c.name} saved"
+end
+
+puts "There are now #{College.count} rows in the colleges table"

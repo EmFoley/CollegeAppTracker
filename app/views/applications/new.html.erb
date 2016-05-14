@@ -1,0 +1,10 @@
+<%= form_for@application, html: { class: 'form'} do |f| %>
+  <div class="field form-group">
+    <%= f.label :college %><br />
+  <% options = options_from_collection_for_select(College.all, 'id', 'name') %>
+  <%= f.select :id, options, :input_html => { class: "form-control" } %>
+
+  <div class="actions btn btn-default">
+    <%= f.submit "Add to Application List", class: 'form-control' %>
+  </div>
+<% end %>

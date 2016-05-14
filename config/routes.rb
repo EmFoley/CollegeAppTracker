@@ -1,4 +1,16 @@
 Rails.application.routes.draw do
+
+  root 'dashboard#index'
+  resources :dashboard, only:[:index]
+  resources :applications
+
+  devise_for :users, path_names: {
+    sign_up: 'register'
+  }
+  # devise_scope :user do
+  #   get 'register', to: 'devise/registrations#new'
+  # end
+  
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
